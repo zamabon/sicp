@@ -7,12 +7,12 @@
 )
 
 
-(define (ffa a b c)
+(define (f a b c)
   (cond 
-   ( ( and (< a b) (< a c) ) (* a a)  ) 
-   ( ( and (< b a) (< b c) ) (* b b)  ) 
-   ( ( and (< c a) (< c b) ) (* c c)  ) 
+   ( ( and (< a b) (< a c) ) (squarePlus b c)  ) 
+   ( ( and (< b a) (< b c) ) (squarePlus a c)) 
+   ( ( and (< c a) (< c b) ) (squarePlus a b) )
   )
 )
 
-(print (square 2))
+(print (f 3 2 4) )
